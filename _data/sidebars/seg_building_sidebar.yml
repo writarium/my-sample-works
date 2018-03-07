@@ -1,0 +1,32 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Advanced Segmentation Building 
+  version:
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+    - title: Data Source Segments
+      url: /segmentation_data_source_segments.html
+      output: web, pdf
+      type: homepage
+      
+    - title: Score based Segments
+      url: /segmentation_score_based_segments.html
+      output: web, pdf  

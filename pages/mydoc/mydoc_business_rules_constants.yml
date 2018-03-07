@@ -1,0 +1,9 @@
+---
+title: Business Rules and Constants
+keywords: logging on, logging on application administrator tool
+last_updated: July 3, 2018
+summary: "The administrator procedures described in this guide are performed using the Application Administrator tool. The default path of the Application Server is <http://localhost/Server/default.aspx>. When you log on to the Application Administrator tool for the first time, the login service uses localhost as the server by default. In case you enter a server name other than localhost, the Application Administrator tool uses this server name when you log on to the server the next time. You must enter a database name if you have entered a server name. If you do not enter a value in the Server Name box, the Server uses localhost as the default server and MASMetadata as the default database. "
+sidebar: mydoc_sidebar
+permalink: mydoc_log_on_app_admin_tool.html
+folder: mydoc
+---

@@ -1,0 +1,122 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Application Administrator Tool
+  version:
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Overview
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Documentation scope and audience
+      url: /mydoc_scope_audience.html
+      output: web, pdf
+
+    - title: Installation Requirements
+      url: /mydoc_installation_rqmts.html
+      output: web, pdf
+
+    - title: Supported Devices
+      url: /mydoc_supported_devices.html
+      output: web, pdf
+
+#    - title: About the theme author
+#      url: /mydoc_about.html
+#      output: web, pdf
+
+ #      - title: Support
+ #        url: /mydoc_support.html
+#         output: web, pdf
+
+  - title: Application Server Architecture
+    output: web, pdf
+    folderitems:
+    - title: "Server Architecture: Components"
+      url: /mydoc_app_server_arch.html
+      output: web, pdf
+
+    - title: Logging on to the Application Administrator tool 
+      url: /mydoc_log_on_app_admin_tool.html
+      output: web, pdf
+
+
+  - title: Create and Modify Business Constants
+    output: web, pdf
+    folderitems:
+    - title: About business contants
+      url: /mydoc_about_business_constants.html
+      output: web, pdf
+
+    - title: Defining a business constant
+      url: /mydoc_defining_business_constants.html
+      output: web, pdf
+
+  - title: Business Objects Configuration
+    output: web, pdf
+    folderitems:
+    - title: About business ohjects
+      url: /mydoc_about_business_objects.html
+      output: web, pdf
+
+    - title: Defining business ohjects
+      url: /mydoc_defining_business_objects.html
+      output: web, pdf
+
+  - title: Business Rules and Constants
+    output: web, pdf
+    folderitems:
+    - title: About business rules and constants
+      url: /mydoc_business_rules_constants.html
+      output: web, pdf
+
+    - title: Defining Business Rules in the Application Administrator tool
+      url: /mydoc_define_business_rule_app_admin_tool.html
+      output: web, pdf
+
+  - title: Configure the Logging
+    output: web, pdf
+    folderitems:
+
+    - title: About logs and log history
+      url: /mydoc_about_logs_and_log_history.html
+      output: web, pdf
+    - title: Working with log records
+      url: /mydoc_viewing_log_records.html
+      output: web, pdf
+
+  - title: Troubleshooting and FAQs
+    output: web, pdf
+    folderitems:
+    - title: Troubleshooting
+      url: /mydoc_troubleshooting.html
+      output: web, pdf
+    - title: FAQs
+      url: /mydoc_faq.html
+      output: web, pdf
+
+
+  - title: Appendix
+    output: web, pdf
+    folderitems:
+    - title: Sample Server-Side Business Rule
+      url: /mydoc_appendix_server_business_rule.html
+      output: web, pdf

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Scores are derived from formulas for the purpose of detecting patterns of customer behavior and responses. Scores in segmentation allow you to create segment...">
+<meta name="keywords" content=" Score-based Segments, score, segments">
+<!-- <title>Score-based Segments | Welcome to Writarium's Online Help</title> -->
+<title>Score-based Segments</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-writarium.css">
+
+ <!-- jQuery and fancyBox files START-->
+ <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+ <!-- jQuery and fancyBox files END-->
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Writarium</span></a> -->
+            <a class="fa fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> <img src="images/writarium-logo.png"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <!-- <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li> -->
+                <li><a id="tg-sb-link" href="#" title="show/hide sidebar" alt="show/hide sidebar"><i id="tg-sb-icon" class="fa fa-toggle-on" title="show/hide sidebar" alt="show/hide sidebar"></i>Show/Hide</a></li>				
+				
+                <!-- entries without drop-downs appear here -->
+
+
+
+                
+                
+                
+                <!-- <li><a href="https://github.com/writarium/" target="_blank">GitHub</a></li> -->
+                <!-- 
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="index.html">Application Administrator Tool</a></li>
+                        
+                        
+                        
+                        <li><a href="segmentation_data_source_segments.html">Segmentation Building</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                <!--  -->
+			<!-- <li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Score-based Segments page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+ -->
+		<!--  -->
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Score-based Segments">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Advanced Segmentation Building </li>
+  
+  
+  
+      
+  
+  <li>
+      <a href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a href="segmentation_data_source_segments.html">Data Source Segments</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a href="segmentation_score_based_segments.html">Score based Segments</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">Score-based Segments</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Scores are derived from formulas for the purpose of detecting patterns of customer behavior and responses. Scores in segmentation allow you to create segments based on scores generated from a scoring engine.</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+
+    
+
+  <h2 id="building-score-based-segments">Building Score-based Segments</h2>
+
+<p>At this stage, you have created segments based on data sources, such as UDV, WHT, and Acquisitions Lists, we shall now learn how to create segments based on scores.</p>
+
+<p>##Score Selectors</p>
+<h3 id="display-filters">Display Filters</h3>
+<p>When you click Display filters on the properties area, Teradata RM opens the Display Filters pop up. Here, you can enter modifiers to filter the selection criteria. The next figure shows the Display Filter pop up.</p>
+
+<p><img src="images/display-filters-pop-up.jpg" /></p>
+
+<h3 id="to-limit-your-choices-using-display-filters">To limit your choices using Display Filters:</h3>
+
+<ol>
+  <li>
+    <p>Select the display filter legend by clicking the semantic element option.</p>
+  </li>
+  <li>
+    <p>Click the appropriate filter value by which you want to filter your results.</p>
+  </li>
+  <li>
+    <p>Click Add Value to enter the ranges or a specific value. This displays the Add Value Display Filter screen.</p>
+  </li>
+  <li>
+    <p>Click <strong>Edit Ranges</strong> to edit or specify specific values for filtering your results.</p>
+  </li>
+  <li>
+    <p>Click <strong>OK</strong> to commit your changes.</p>
+  </li>
+</ol>
+
+<p>Edit Ranges</p>
+
+<p>The Edit Display Filters pop up window allows you to add, edit, or delete ranges for scores that have previously been created. This window is displayed when you click Edit Ranges in the Display Filters pop up and is shown in the next figure.</p>
+
+<p><img src="images/edit-ranges.jpg" /></p>
+
+<h3 id="to-edit-ranges-in-the-display-filter-window">To edit ranges in the Display Filter window:</h3>
+
+<ol>
+  <li>
+    <p>Click <strong>Add</strong> to add a legend range. Enter a specific value and click <strong>Apply</strong>.</p>
+  </li>
+  <li>
+    <p>To delete a range, select the range and click <strong>Delete</strong>.</p>
+  </li>
+  <li>
+    <p>.  To import a range, click <strong>Import Ranges</strong>.</p>
+  </li>
+</ol>
+
+<h3 id="export-ranges">Export Ranges</h3>
+
+<p>You can export ranges for future use in the Display Filters pop up window. To export ranges, select the file name and click <strong>Export ranges</strong>.</p>
+
+<h3 id="add-value">Add Value</h3>
+
+<p>The Add Value link in Display Filters pop up allows you to add new ranges to scores. Clicking this link displays the <strong>Add Display Filter</strong> pop up as shown in the next figure.</p>
+
+<p><img src="images/add-value-display-popup.jpg" /></p>
+
+<h3 id="to-add-a-new-range-to-scores">To add a new range to scores</h3>
+
+<ol>
+  <li>
+    <p>Click Value list and select an option from the drop down list to add a value.</p>
+  </li>
+  <li>
+    <p>Enter the ranges or a specific value depending on the option selected in the previous step. In addition, you may optionally click Import Ranges to import ranges from a file. The data in the file will be imported to the display filters dialog box.</p>
+  </li>
+  <li>
+    <p>Click OK to add the new ranges to the scores list control.</p>
+  </li>
+</ol>
+
+<h2 id="add-expression">Add Expression</h2>
+<p>The Add Expression Builder pop up is similar to the one you have come across in. However, the Table Columns list is not available when creating score-based segments. The next figure displays the Add Expression builder pop up.
+Figure 13. .  figure not available as of now</p>
+
+<h3 id="to-add-an-expression-using-expression-builder">To add an expression using expression builder</h3>
+
+<ol>
+  <li>
+    <p>Select a function from the list of pre-defined functions and click Add or double-click to add the selected function to the expression.</p>
+  </li>
+  <li>
+    <p>Select an operator from the list of operators and click Add or double-click to add the selected operator to the expression. You may optionally modify the expression that you have created in the text area or click Clear Expression to clear the text area.</p>
+  </li>
+  <li>
+    <p>Click OK to save the expression.</p>
+  </li>
+</ol>
+
+<h1 id="associated-criteria-segments">Associated Criteria Segments</h1>
+<h2 id="defining-associated-criteria-segments">Defining Associated Criteria Segments</h2>
+<p>Associated criteria segments allow you to specify a criteria set, which has multiple records in the database. The criterion in this case is based on the associating semantic and not the output</p>
+
+
+
+    <div class="tags">
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2018 Writarium. All rights reserved. <br />
+ Site last generated: Mar 7, 2018 <br />
+<p><img src="images/writarium-logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Agile controls are found on the Toolbox and allow you to bind data from business objects to the controls. For example, you can bind Customer business object ...">
+<meta name="keywords" content="architectureserver architecture,  Modify Business Constants, create Business Constants, business constants">
+<!-- <title>About business objects and constants | Welcome to Writarium's Online Help</title> -->
+<title>About business objects and constants</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-writarium.css">
+
+ <!-- jQuery and fancyBox files START-->
+ <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
+ <!-- jQuery and fancyBox files END-->
+ 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Writarium</span></a> -->
+            <a class="fa fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> <img src="images/writarium-logo.png"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button -->
+                <!-- <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li> -->
+                <li><a id="tg-sb-link" href="#" title="show/hide sidebar" alt="show/hide sidebar"><i id="tg-sb-icon" class="fa fa-toggle-on" title="show/hide sidebar" alt="show/hide sidebar"></i>Show/Hide</a></li>				
+				
+                <!-- entries without drop-downs appear here -->
+
+
+
+                
+                
+                
+                <!-- <li><a href="https://github.com/writarium/" target="_blank">GitHub</a></li> -->
+                <!-- 
+                
+                
+                <li><a href="news">News</a></li>
+                
+                
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li><a href="index.html">Application Administrator Tool</a></li>
+                        
+                        
+                        
+                        <li><a href="segmentation_data_source_segments.html">Segmentation Building</a></li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                <!--  -->
+			<!-- <li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the About business objects and constants page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+ -->
+		<!--  -->
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="search...">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="About business objects and constants">{title}</a></li>',
+                    noResultsText: 'No results found.',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Application Administrator Tool </li>
+  
+  
+  
+      
+  
+  <li>
+      <a href="#">Overview</a>
+      <ul>
+          
+          
+          
+          <li><a href="index.html">Introduction</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_scope_audience.html">Documentation scope and audience</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_installation_rqmts.html">Installation Requirements</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_supported_devices.html">Supported Devices</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Application Server Architecture</a>
+      <ul>
+          
+          
+          
+          <li><a href="mydoc_app_server_arch.html">Server Architecture: Components</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_log_on_app_admin_tool.html">Logging on to the Application Administrator tool</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Create and Modify Business Constants</a>
+      <ul>
+          
+          
+          
+          <li class="active"><a href="mydoc_about_business_constants.html">About business contants</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_defining_business_constants.html">Defining a business constant</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Business Objects Configuration</a>
+      <ul>
+          
+          
+          
+          <li><a href="mydoc_about_business_objects.html">About business ohjects</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_defining_business_objects.html">Defining business ohjects</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Business Rules and Constants</a>
+      <ul>
+          
+          
+          
+          <li><a href="mydoc_business_rules_constants.html">About business rules and constants</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_define_business_rule_app_admin_tool.html">Defining Business Rules in the Application Administrator tool</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Configure the Logging</a>
+      <ul>
+          
+          
+          
+          <li><a href="mydoc_about_logs_and_log_history.html">About logs and log history</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_viewing_log_records.html">Working with log records</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Troubleshooting and FAQs</a>
+      <ul>
+          
+          
+          
+          <li><a href="mydoc_troubleshooting.html">Troubleshooting</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="mydoc_faq.html">FAQs</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Appendix</a>
+      <ul>
+          
+          
+          
+          <li><a href="mydoc_appendix_server_business_rule.html">Sample Server-Side Business Rule</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <h1 class="post-title-main">About business objects and constants</h1>
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary">Agile controls are found on the Toolbox and allow you to bind data from business objects to the controls. For example, you can bind Customer business object data to an agile list view. As the Customer data is edited and updated in the database, those updates are shown in the agile list view automatically once the form that holds the list view is loaded.</div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+
+    
+
+  <p>The agile controls are a set of controls that inherit from the corresponding versions of the standard Microsoft .Net framework controls, which are part of the Microsoft Visual Studio software. These controls are now extended by adding BusinessObject binding functionality as well as miscellaneous other properties. The Agile Control interface is the base interface for all other agile control interfaces. This interface is used to bind the control to a BusinessObjectSet component. It allows the business object set to direct the population of the data on the control.</p>
+
+<p>The AgileTenKey compound control is the only agile control that does <em>not</em> have data binding capabilities. If you do not need properties on controls to change with changing business object data, you can use the standard controls on the Device Controls Toolbox that are included with the Microsoft Visual Studio software. The following table contains a list of the agile controls, which are listed alphabetically.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Agile Control Name</strong></th>
+      <th><strong>Definition</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AgileButton</td>
+      <td>This custom control displays a standard button and binds the Text property to Business Object properties.</td>
+    </tr>
+    <tr>
+      <td>AgileCheckBox</td>
+      <td>This custom control displays a standard check box and binds the Checked property to a Business Object property.</td>
+    </tr>
+    <tr>
+      <td>AgileComboBox</td>
+      <td>This custom control displays a standard combo box control and binds the SelectedValue property to a BusinessObject property. The list for the combo box is then bound to a business object set. In a design scenario in which two agile combo boxes are in a master/child relationship, for example, and each is bound to a separate business object set, make sure to set properties so that the child combo box either gets its information from the business object set <em>or</em> the master combo box. Otherwise, an exception occurs at run-time. <strong>Note:</strong> Do not set actions to the Click event for an AgileComboBox. The Click event does not fire. This is due to Microsoft .NET functionality in the Combo box.</td>
+    </tr>
+    <tr>
+      <td>AgileDateTimePicker</td>
+      <td>This custom control is similar to the DateTimePicker control in the full version of the Microsoft .Net framework. The Dexterra control behavior is derived from the .NET behavior. <strong>Available :</strong> 1/1/1752- 12/31/9998.</td>
+    </tr>
+    <tr>
+      <td>AgileLabel</td>
+      <td>This custom control displays a standard label control and binds the Text property to a BusinessObject property.</td>
+    </tr>
+    <tr>
+      <td>AgileLinkLabel</td>
+      <td>This custom control displays underlined text. It binds the Text property to a BusinessObject property.</td>
+    </tr>
+    <tr>
+      <td>AgileListBox</td>
+      <td>This custom control displays a standard list box control and binds the SelectedValue property to a BusinessObject property. The list for the list box is also bound to a business object set.</td>
+    </tr>
+    <tr>
+      <td>AgileListView</td>
+      <td>This custom control displays a standard list view control and binds it to a business object set. The KeyProperty is used to reselect the item in the ListView. It doesn’t necessarily have to be unique.</td>
+    </tr>
+    <tr>
+      <td>AgileMenuItem</td>
+      <td>This custom component displays a standard menu item control and binds its Text property to a BusinessObject property. Once it has been added to a form, you can add a SubMenuItem (also known as a menu option).</td>
+    </tr>
+    <tr>
+      <td>AgilePageView</td>
+      <td>This control provides paged access to business object data. It is similar to the AgileListView control in that it allows end users to see business object data. It also has additional functionality to manage contents by employing Back and Next navigation through the pages. Note that the number of rows in an agile page view decreases by one when the ImageColumn property is set to True and ImageList property is set to any ImageList object. This is because the default image size in an ImageList property is 16x16. The row height must be increased to accommodate the image height. This results in fewer visible rows, because the overall height of the control doesn’t change. Also note that the Size property or the height of the control is calculated by a combination of the visible rows and the size of the selected font.</td>
+    </tr>
+    <tr>
+      <td>AgilePictureButton</td>
+      <td>This custom control displays a standard picture box control and binds the Image property to a BusinessObject property. The BusinessObject property values must be binary data that holds images.</td>
+    </tr>
+    <tr>
+      <td>AgileRadioButton</td>
+      <td>This custom control displays a standard radio button and binds the Checked property to a BusinessObject property.</td>
+    </tr>
+    <tr>
+      <td>AgileSignature</td>
+      <td>This custom control displays a standard panel control with a black border around the edge. You can employ it to capture the vector coordinates as you drag the stylus around the client surface of the control. It binds the coordinate string to a BusinessObject property of type string.</td>
+    </tr>
+    <tr>
+      <td>AgileTextBox</td>
+      <td>If the control is edit-enabled (meaning the Read-Only property is set to False), the Text property is bound to the single editable BusinessObject property specified in the EditProperty property. If the control is not edit-enabled (meaning the Read-Only property is set to True), the Text property is bound to the BusinessObject properties specified in the DisplayProperties array. For the FontName property of the AgileTextbox, make sure to use fonts that are supported by Microsoft .NET Compact Framework. <strong>Note:</strong> The TextChanged event of the AgileTextBox is fired when the text within the box changes. This is standard Microsoft .NET behavior. To avoid this, you can use an ActionNotify action and an ActionGetSet action. Tie the ActionNotify Succeeded event to the ActionGetSet action. Also note that the AgileTextBox returns <em>Type</em> instead of <em>Value</em> when used in conjunction with the ActionGetSet action. This is Microsoft .NET Compact Framework behavior. The Dexterra Composer Framework derives its behavior from the Microsoft .NET Compact Framework. You can get another value other than Type name by overriding the ToString method on the object that is being converted by the ActionGetSet.</td>
+    </tr>
+    <tr>
+      <td>AgileToolBarButton</td>
+      <td>This custom control displays a standard toolbar button. The Image property of the button can be bound to a BusinessObject property. The toolbar that contains this toolbar button is automatically included in the frame that contains forms during run-time.</td>
+    </tr>
+    <tr>
+      <td>AgileTreeView</td>
+      <td>This custom control displays a standard tree view control and binds its nodes collection to a BusinessObjectSet component. If a tree descriptor is not bound to a <strong>LinkProperty</strong>, it displays all immediate business objects in the business object set. If a tree descriptor is bound to a <strong>LinkProperty</strong>, it displays all business objects in the BuisneesObjectLink for the business object set’s CurrentBusinessObject. Since the agile tree view control is not a Set control, it does not set the CurrentBusinessObject when the user selects a node.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        
+        
+        
+        
+    </div>
+
+
+
+
+</div>
+
+<hr class="shaded"/>
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2018 Writarium. All rights reserved. <br />
+<span>Page last updated:</span> July 3, 2018<br/> Site last generated: Mar 7, 2018 <br />
+<p><img src="images/writarium-logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+</html>
